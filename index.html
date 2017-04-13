@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link href="styles/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Courgette&amp;Neucha" rel="stylesheet"> 
+  <title>HTML5 APIs: Assignment 1</title>
+  </head>
+  <body>
+    <main>
+    <section>
+      <h1>Grade Details</h1> 
+      <p>
+          Enter each student's grade in the, "Enter grade points here" field.
+      </p>
+      <p>
+          The Count of grades entered, Sum of total points, and average points will automatically display.
+      </p>
+    </section>
+      <form name="gradeForm" class=formContent>
+
+      <label>Enter grade points here: 
+
+        <input type="number" name="grade" id=gradeInput >
+
+      </label>
+
+      <input type="submit" value="Submit" onclick="addGrade()">
+      <input type="submit" value="Reset" onclick="clearResults()">
+      <div id="gradeResults">
+      <p>
+          Count: <span id="count"> </span>
+      </p>
+     
+      <p>
+          Sum: <span id="sum"> </span>
+      </p>
+      <p>
+          Average: <span id="average"> </span>
+      </p>
+        </div>
+        
+    </form>
+    
+      <script type="text/javascript" src="js/grades.js">
+    </script>
+      </main>
+  </body>
+</html>
