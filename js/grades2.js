@@ -8,17 +8,9 @@ var sum = "";
 function addGrade(){
   event.preventDefault();
   var newGrade = Number(document.gradeForm.grade.value);
-
-// trying to add validation so the user cannot submit a blank value. 
-  
-//  if (gradeInput.value.length == "");
-//    window.alert("Grade cannot be blank.");
-//    gradeInput.focus();
-//    return false;
-//    }
-//  } else {
-  
-  
+  if (isNaN(newGrade)) {
+    alert("not a valid value");
+  } else {
     numbers.push(newGrade);
     updateGrades();
   }

@@ -1,4 +1,10 @@
+// Declaring the variable 
+
 var numbers = [];
+var sum = "";
+
+//function to add each grade
+
 function addGrade(){
   event.preventDefault();
   var newGrade = Number(document.gradeForm.grade.value);
@@ -8,14 +14,11 @@ function addGrade(){
     numbers.push(newGrade);
     updateGrades();
   }
-  document.gradeForm.grade.value = "";
+    document.gradeForm.grade.value = "";
 }
 
-function clearResults() {
-  event.preventDefault();
-  numbers = [];
-  updateGrades();
-}
+
+//function to update the count, sum and average values for all grades
 
 function updateGrades()
 {
@@ -34,6 +37,17 @@ function updateGrades()
     }
     gradeSum.innerHTML = total;
     gradeAverage.innerHTML =(total / numbers.length);
+  }
+  
+//Save for later. Need to figure out how to only have two decimals to display in the Average field calculation.  I tried the .toFixed(), but I couldn't get it to work. 
+  
+  
+  
+  // function to clear all of the values and start over  
+function clearResults() {
+  event.preventDefault();
+  numbers = [];
+  updateGrades();
   }
 }
 
